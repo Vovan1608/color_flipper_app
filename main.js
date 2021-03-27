@@ -1,5 +1,3 @@
-// import {btn, color, getRandomNumber} from "./helpers/general.js";
-
 const items = ["green", "red", "rgb(133, 122, 200)", "#f15025"];
 
 const btn = document.getElementById("btn");
@@ -7,8 +5,9 @@ const color = document.querySelector(".color");
 
 function handler () {
 	const randomNum = getRandomNumber();
-	document.body.style.backgroundColor = items[randomNum];
-	color.textContent = items[randomNum];
+	document.body.style.backgroundColor = items[getRandomNumber()];
+	color.textContent = items[getRandomNumber()];
+	btn.style.backgroundColor = items[getRandomNumber()];
 }
 
 btn.addEventListener("click", handler);
