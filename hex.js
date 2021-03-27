@@ -1,9 +1,7 @@
-import {btn, color, getRandomNumber} from "./helpers/common.js";
-
 const items = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
 
-// const btn = document.getElementById("btn");
-// const color = document.querySelector(".color");
+const btn = document.getElementById("btn");
+const color = document.querySelector(".color");
 
 function handler () {
 	let hexColor = "#";
@@ -16,6 +14,6 @@ function handler () {
 
 btn.addEventListener("click", handler);
 
-// function getRandomNumber() {
-// 	return Math.floor(Math.random() * hex.length);
-// }
+function getRandomNumber() {
+	return Math.floor(Math.random() * items.length);
+}
