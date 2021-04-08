@@ -4,12 +4,20 @@ const btn = document.getElementById("btn");
 const color = document.querySelector(".color");
 
 function handler () {
-	let hexColor = "#";
+	let hexColorBody = "#";
+	let hexColorBtn = "#";
+	let hexColorNav = "#";
+
 	for (let i = 0; i < 6; i++) {
-		hexColor += items[getRandomNumber()];
+		hexColorBody += items[getRandomNumber()];
+		hexColorBtn += items[getRandomNumber()];
+		hexColorNav += items[getRandomNumber()];
 	}
-	document.body.style.backgroundColor = hexColor;
-	color.textContent = hexColor;
+
+	document.body.style.backgroundColor = hexColorBody;
+	color.textContent = hexColorBody;
+	btn.style.backgroundColor = hexColorBtn;
+	document.querySelector(".nav").style.backgroundColor = hexColorNav;
 }
 
 btn.addEventListener("click", handler);
